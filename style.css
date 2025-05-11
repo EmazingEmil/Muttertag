@@ -12,7 +12,7 @@
 
 body {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-end !important;
   justify-content: center;
   min-height: 100vh;
   background-color: var(--dark-color);
@@ -1008,10 +1008,10 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   animation: fadeInMessage 2.2s 1.2s forwards;
 }
 @media (max-width: 700px) {
-  .muttertag-message { font-size: 1.2rem; padding: 0.7rem 1.2rem; min-width: 0; }
+  .muttertag-message { font-size: 1.1rem; padding: 0.5rem 0.7rem; min-width: 0; max-width: 98vw; }
 }
-@media (max-width: 400px) {
-  .muttertag-message { font-size: 0.9rem; padding: 0.4rem 0.7rem; min-width: 0; }
+@media (max-width: 430px) {
+  .muttertag-message { font-size: 0.8rem; padding: 0.3rem 0.3rem; min-width: 0; max-width: 99vw; }
 }
 
 .muttertag-message .typed {
@@ -1032,12 +1032,14 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 
 /* Responsive adjustments */
 @media (max-width: 700px) {
-  .flowers { transform: scale(0.45); }
-  .muttertag-message { font-size: 1.2rem; padding: 0.7rem 1.2rem; }
+  .flowers { transform: scale(0.38); }
+  .muttertag-message { font-size: 1.1rem; padding: 0.5rem 0.7rem; }
+  #start-btn { font-size: 0.95rem; padding: 0.5em 1.1em; }
 }
-@media (max-width: 400px) {
-  .flowers { transform: scale(0.28); }
-  .muttertag-message { font-size: 0.9rem; padding: 0.4rem 0.7rem; }
+@media (max-width: 430px) {
+  .flowers { transform: scale(0.22); }
+  .muttertag-message { font-size: 0.8rem; padding: 0.3rem 0.3rem; }
+  #start-btn { font-size: 0.8rem; padding: 0.4em 0.7em; }
 }
 
 /* Floating petals/sparkles */
@@ -1088,13 +1090,17 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   inset: 0;
   background: rgba(0,0,0,0.7); /* less dark, keep flower bg visible */
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  padding-bottom: 10vh;
   transition: opacity 0.5s;
 }
 #start-overlay.hide {
   opacity: 0;
   pointer-events: none;
+}
+@media (max-width: 430px) {
+  #start-overlay { padding-bottom: 2vh; }
 }
 #start-btn {
   font-size: 1.1rem;
@@ -1113,6 +1119,12 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 #start-btn:hover {
   transform: scale(1.08) rotate(-2deg);
   box-shadow: 0 8px 32px 0 #ffe066;
+}
+@media (max-width: 700px) {
+  #start-btn { font-size: 0.95rem; padding: 0.5em 1.1em; }
+}
+@media (max-width: 430px) {
+  #start-btn { font-size: 0.8rem; padding: 0.4em 0.7em; }
 }
 @keyframes pulseBtn {
   0%, 100% { box-shadow: 0 4px 32px 0 #ffe06644; }
